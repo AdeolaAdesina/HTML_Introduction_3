@@ -419,3 +419,672 @@ Solution: Index.txt will be:
 
 </html>
 ```
+
+# Radio Button Input
+
+However, there are cases where we want to present multiple options and only allow for one selection — like asking users if they agree or disagree with the terms and conditions. Let’s look over the code used to create radio buttons:
+
+```
+<form>
+  <p>What is sum of 1 + 1?</p>
+  <input type="radio" id="two" name="answer" value="2">
+  <label for="two">2</label>
+  <br>
+  <input type="radio" id="eleven" name="answer" value="11">
+  <label for="eleven">11</label>
+</form>
+```
+
+![Screenshot_132](https://user-images.githubusercontent.com/29931071/197583426-c9427780-9fbb-4b7e-8e80-511ebd82c274.png)
+
+Notice from the code snippet, radio buttons (like checkboxes) do not display their value. 
+
+We have an associated ```<label>``` to represent the value of the radio button. To group radio buttons together, we assign them the same name and only one radio button from that group can be selected.
+
+Let’s see this in action by creating our own radio buttons.
+
+## Class work
+
+In ```<body>``` element, create a radio button option.
+
+Make the question "Are you ready to build on Polygon?" Yes and No.
+
+The created ```<input>``` should have:
+
+an id set to "yes" and "no"
+a type set to "radio".
+a name attribute with a value of "answer".
+a value of "yes" and "no".
+
+Solution: Index.txt will be:
+
+```
+<html>
+
+
+
+<head>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<form>
+
+
+
+<label for="username">Username</label>
+
+
+
+<input type="text" name="username" value="Polygon"></input>
+
+
+
+<label for="user-pw">Password</label>
+
+
+
+<input type="password" name="user-pw"></input>
+
+
+
+<label for="amount">Years of experience</label>
+
+
+
+<input id="amount" type="number" step="1" name=""amount></input>
+
+
+
+<label for="doness">Range</label>
+
+
+
+<input id="doneness" type="range" step="0.5" name="doneness" min="0" max="5"></input>
+
+
+
+<p>Choose your level:</p>
+
+
+
+<label for="100level">100 level</label>
+
+
+<input id="100level" name="level" type="checkbox" value="100level">
+
+<br>
+
+
+
+<label for="200level">200 level</label>
+
+<input id="200level" name="level" type="checkbox" value="200level">
+
+<br>
+
+
+
+<label for="300level">300 level</label>
+
+<input id="300level" name="level" type="checkbox" value="300level">
+
+<br>
+
+
+
+</form>
+
+
+
+<form>
+  
+
+<p>Are you ready to build on Polygon?</p>
+  
+
+<input type="radio" id="yes" name="answer" value="Yes">
+  
+<label for="yes">Yes</label>
+  
+<br>
+  
+
+<input type="radio" id="no" name="answer" value="No">
+  
+<label for="no">No</label>
+
+</form>
+
+</body>
+
+
+
+</html>
+```
+
+# Dropdown listdown
+
+Radio buttons are great if we want our users to pick one option out of a few visible options, but imagine if we have a whole list of options! This situation could quickly lead to a lot of radio buttons to keep track of.
+
+An alternative solution is to use a dropdown list to allow our users to choose one option from an organized list. Here’s the code to create a dropdown menu:
+
+```
+<form>
+  <label for="lunch">What's for lunch?</label>
+  <select id="lunch" name="lunch">
+    <option value="pizza">Pizza</option>
+    <option value="curry">Curry</option>
+    <option value="salad">Salad</option>
+    <option value="ramen">Ramen</option>
+    <option value="tacos">Tacos</option>
+  </select>
+</form>
+```
+
+![Screenshot_133](https://user-images.githubusercontent.com/29931071/197587533-76aa3657-80aa-4c62-8c25-4cec443d81b6.png)
+
+
+## Class work
+
+Create a form with a dropdown list, with the following criteria:
+
+Question: How long have you been building on Polygon?
+
+Options: 1 year, 2 years, 3 years.
+
+
+Solution: Index.txt will be:
+
+```
+<html>
+
+
+
+<head>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<form>
+
+
+
+<label for="username">Username</label>
+
+
+
+<input type="text" name="username" value="Polygon"></input>
+
+
+
+<label for="user-pw">Password</label>
+
+
+
+<input type="password" name="user-pw"></input>
+
+
+
+<label for="amount">Years of experience</label>
+
+
+
+<input id="amount" type="number" step="1" name=""amount></input>
+
+
+
+<label for="doness">Range</label>
+
+
+
+<input id="doneness" type="range" step="0.5" name="doneness" min="0" max="5"></input>
+
+
+
+<p>Choose your level:</p>
+
+
+
+<label for="100level">100 level</label>
+
+
+<input id="100level" name="level" type="checkbox" value="100level">
+
+<br>
+
+
+
+<label for="200level">200 level</label>
+
+<input id="200level" name="level" type="checkbox" value="200level">
+
+<br>
+
+
+
+<label for="300level">300 level</label>
+
+<input id="300level" name="level" type="checkbox" value="300level">
+
+<br>
+
+
+
+</form>
+
+
+
+<form>
+  
+
+<p>Are you ready to build on Polygon?</p>
+  
+
+<input type="radio" id="yes" name="answer" value="Yes">
+  
+<label for="yes">Yes</label>
+  
+<br>
+  
+
+<input type="radio" id="no" name="answer" value="No">
+  
+<label for="no">No</label>
+
+</form>
+
+<form>
+  
+<label for="build">How long have you been building on Polygon?</label>
+  
+<select id="build" name="build">
+    
+<option value="1 year">1 year</option>
+    
+<option value="2 years">2 years</option>
+    
+<option value="3 years">3 years</option>
+     
+</select>
+
+</form>
+
+</body>
+
+
+
+</html>
+```
+
+# Datalist Input
+
+Even if we have an organized dropdown list, if the list has a lot of options, it could be tedious for users to scroll through the entire list to locate one option. That’s where using the <datalist> element comes in handy.
+
+The ```<datalist>``` is used with an ```<input type="text">``` element. The ```<input>``` creates a text field that users can type into and filter options from the ```<datalist>```. Let’s go over a concrete example:
+
+```
+<form>
+  <label for="city">Ideal city to visit?</label>
+  <input type="text" list="cities" id="city" name="city">
+ 
+  <datalist id="cities">
+    <option value="New York City"></option>
+    <option value="Tokyo"></option>
+    <option value="Barcelona"></option>
+    <option value="Mexico City"></option>
+    <option value="Melbourne"></option>
+    <option value="Other"></option>  
+  </datalist>
+</form>
+```
+
+![Screenshot_134](https://user-images.githubusercontent.com/29931071/197589362-ee2c2103-fd51-450f-8f6a-3569fef88d25.png)
+
+Notice, in the code above, we have an ```<input>``` that has a list attribute. The ```<input>``` is associated to the ```<datalist>``` via the ```<input>```‘s list attribute and the id of the ```<datalist>```.
+
+
+## Class work
+
+Create the same drop down list you created earlier but make it a datalist.
+
+Solution: Our index.txt will be.
+
+```
+<html>
+
+
+
+<head>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<form>
+
+
+
+<label for="username">Username</label>
+
+
+
+<input type="text" name="username" value="Polygon"></input>
+
+
+
+<label for="user-pw">Password</label>
+
+
+
+<input type="password" name="user-pw"></input>
+
+
+
+<label for="amount">Years of experience</label>
+
+
+
+<input id="amount" type="number" step="1" name=""amount></input>
+
+
+
+<label for="doness">Range</label>
+
+
+
+<input id="doneness" type="range" step="0.5" name="doneness" min="0" max="5"></input>
+
+
+
+<p>Choose your level:</p>
+
+
+
+<label for="100level">100 level</label>
+
+
+<input id="100level" name="level" type="checkbox" value="100level">
+
+<br>
+
+
+
+<label for="200level">200 level</label>
+
+<input id="200level" name="level" type="checkbox" value="200level">
+
+<br>
+
+
+
+<label for="300level">300 level</label>
+
+<input id="300level" name="level" type="checkbox" value="300level">
+
+<br>
+
+
+
+</form>
+
+
+
+<form>
+  
+
+<p>Are you ready to build on Polygon?</p>
+  
+
+<input type="radio" id="yes" name="answer" value="Yes">
+  
+<label for="yes">Yes</label>
+  
+<br>
+  
+
+<input type="radio" id="no" name="answer" value="No">
+  
+<label for="no">No</label>
+
+</form>
+
+<form>
+  
+<label for="build">How long have you been building on Polygon?</label>
+  
+<select id="build" name="build">
+    
+<option value="1 year">1 year</option>
+    
+<option value="2 years">2 years</option>
+    
+<option value="3 years">3 years</option>
+     
+</select>
+
+</form>
+
+<form>
+  <label for="city">How long have you been building on polygon?</label>
+  <input type="text" list="polygon" id="build" name="build">
+ 
+  <datalist id="polygon">
+    <option value="1 year"></option>
+    <option value="2 years"></option>
+    <option value="3 years"></option>
+    <option value="4 years"></option>
+    <option value="5 years"></option>
+    <option value="Other"></option>  
+  </datalist>
+</form>
+
+</body>
+
+</html>
+```
+
+# Textarea element
+
+The ```<textarea>``` element is used to create a bigger text field for users to write more text. We can add the attributes rows and cols to determine the amount of rows and columns for the ```<textarea>```. Take a look:
+
+
+```
+<form>
+  <label for="blog">New Blog Post: </label>
+  <br>
+  <textarea id="blog" name="blog" rows="5" cols="30">
+  </textarea>
+</form>
+```
+
+![Screenshot_135](https://user-images.githubusercontent.com/29931071/197590887-14535ddb-06d3-445f-a920-b4fde7cebdca.png)
+
+## Class work
+
+Add the example code to the body element of the Index.txt file.
+
+
+# Submit Form
+
+To make a submit button in a ```<form>```, we’re going to use the reliable ```<input>``` element and set the type to "submit". For instance:
+
+```
+<form>
+  <input type="submit" value="Send">
+</form>
+```
+
+![Screenshot_136](https://user-images.githubusercontent.com/29931071/197591981-34e5f649-80e6-437e-a068-3dbec34d3636.png)
+
+
+## Class work
+
+Create a submit button on the data list you created last.
+
+Final code will be:
+
+```
+<html>
+
+
+
+<head>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<form>
+
+
+
+<label for="username">Username</label>
+
+
+
+<input type="text" name="username" value="Polygon"></input>
+
+
+
+<label for="user-pw">Password</label>
+
+
+
+<input type="password" name="user-pw"></input>
+
+
+
+<label for="amount">Years of experience</label>
+
+
+
+<input id="amount" type="number" step="1" name=""amount></input>
+
+
+
+<label for="doness">Range</label>
+
+
+
+<input id="doneness" type="range" step="0.5" name="doneness" min="0" max="5"></input>
+
+
+
+<p>Choose your level:</p>
+
+
+
+<label for="100level">100 level</label>
+
+
+<input id="100level" name="level" type="checkbox" value="100level">
+
+<br>
+
+
+
+<label for="200level">200 level</label>
+
+<input id="200level" name="level" type="checkbox" value="200level">
+
+<br>
+
+
+
+<label for="300level">300 level</label>
+
+<input id="300level" name="level" type="checkbox" value="300level">
+
+<br>
+
+
+
+</form>
+
+
+
+<form>
+  
+
+<p>Are you ready to build on Polygon?</p>
+  
+
+<input type="radio" id="yes" name="answer" value="Yes">
+  
+<label for="yes">Yes</label>
+  
+<br>
+  
+
+<input type="radio" id="no" name="answer" value="No">
+  
+<label for="no">No</label>
+
+</form>
+
+<form>
+  
+<label for="build">How long have you been building on Polygon?</label>
+  
+<select id="build" name="build">
+    
+<option value="1 year">1 year</option>
+    
+<option value="2 years">2 years</option>
+    
+<option value="3 years">3 years</option>
+     
+</select>
+
+</form>
+
+<form>
+  <label for="city">How long have you been building on polygon?</label>
+  <input type="text" list="polygon" id="build" name="build">
+ 
+  <datalist id="polygon">
+    <option value="1 year"></option>
+    <option value="2 years"></option>
+    <option value="3 years"></option>
+    <option value="4 years"></option>
+    <option value="5 years"></option>
+    <option value="Other"></option>  
+  </datalist>
+
+<section class="submission">
+<input type="submit" value="Submit">
+</section>
+</form>
+
+</body>
+
+</html>
+```
+
